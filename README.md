@@ -1,7 +1,11 @@
 # Green 4 Earth
 ## The official G4 project WebPage
 -----
+<<<<<<< HEAD
 ### Chat is G4?
+=======
+### What is G4?
+>>>>>>> f5a02d2bec6b6f74717ea432358261076c11172c
 
 
 ### Meet the Team
