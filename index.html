@@ -8,39 +8,45 @@
     <style>
       body, html{
         margin: 0;
+        background-color: black;
+      }
+      a {
+        color: black;
+        text-decoration: none;
       }
       h1{
         font-family: 'Londrina Shadow', cursive;
-        text-align: center;
-        font-size: 75px;
+        text-align: left;
+        font-size: 90px;
         color: #005F30;
-        margin: 0;
+        margin-bottom: 200px;
       }
       h2 {
         text-align: center;
-        color: #000;
-        padding: 0 0 50px 0;
-        margin: 0px 60px 0px 0px;
+        text-shadow: 10px 10px darkgreen;
+        font-size: 75px;
+        color: rgba(255,255,255,1);
+        padding: 0 0 250px 0;
       }
       ul {
-        color: white;
         padding: 10px;
-        background: rgba(0,0,0,0.5);
+        background: rgba(255,255,255,0.8);
       }
       img {
-        margin: 0px 0px 0px 0px;
-        border: 5px solid #004020;
+        margin: 10px 200px 0px 10px;
+        border: 10px solid #004020;
         border-radius: 300px;
+        float: left;
       }
       li {
+        size: 100px;
         display: inline;
-        text-decoration-color: white;
-        padding: 0px 10px 0px 10px;
+        padding: 0px 20px 0px 20px;
         text-align: center;
       }
       header {
-        height: auto;
-        width: auto;
+        width: cover;
+        height: 600;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -49,18 +55,18 @@
     </style>
   </head>
   <body>
-    <header id="home">
+    <header>
       <img src="https://avatars0.githubusercontent.com/u/37424638?s=400&u=68018b143b9e2883e11269faaf8f409783df8927&v=4"alt="Green 4 Earth LOGO" height=200 width=200>
-      <h1> Green 4 Earth </h1>
+      <h1 id="home"> Green 4 Earth </h1>
       <h2> Investing in a greener future</h2>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#">Chemistry</a></li>
-        <li><a href="#">Physics</a></li>
-        <li><a href="#">Biology</a></li>
-        <li><a href="#">Data and Analysis</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
     </header>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#">Chemistry</a></li>
+      <li><a href="#">Physics</a></li>
+      <li><a href="#">Biology</a></li>
+      <li><a href="#">Data and Analysis</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
   </body>
 </html>
