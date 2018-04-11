@@ -39,7 +39,12 @@
         padding: 0 0 250px 0;
       }
       h3 {
-        margin-bottom: 1500;
+        font-size: 40px;
+        margin: 10px;
+      }
+      p {
+        display: block;
+        margin: 20px;
       }
       ul {
         margin: 0;
@@ -61,11 +66,27 @@
       }
       header {
         width: cover;
+        margin:auto;
         height: 600;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/09/34/db/d3/parque-ecoalberto.jpg");
+      }
+      .footer {
+        display: block;
+        color: white;
+        padding: 30px;
+        margin-top: 40px;
+        box-shadow: 100px 100px 100px 100px rgba(0, 255, 0, 0.6);
+        background-color:  #008040;
+        display: block;
+        text-align: left;
+      }
+      .footer2 {
+        margin-top: -10px;
+        font-size: 20px;
+        margin-left: auto;
       }
       .content {
         padding: 10px;
@@ -89,14 +110,25 @@
     <div class="scroll" id="myScroll">
       <ul>
         <li><a href="#header" target="_self">Home</a></li>
-        <li><a href="https://green-4-earth.github.io/Website/chemistry.html" target="_self">Chemistry</a></li>
+        <li><a href="https://green-4-earth.github.io/Website/test.jsp" target="_self">Chemistry</a></li>
         <li><a href="https://green-4-earth.github.io/Website/physics.html" target="_self">Physics</a></li>
         <li><a href="https://green-4-earth.github.io/Website/biology.html" target="_self">Biology</a></li>
         <li><a href="https://green-4-earth.github.io/Website/data_and_analysis.html" target="_self">Data and Analysis</a></li>
         <li><a href="https://green-4-earth.github.io/Website/contact.html" target="_self">Contact</a></li>
       </ul>
     </div>
-    <h3></h3>
+    <div class="body">
+      <h3>What is G4?</h3>
+      <br>
+      <p>Lorem ipsum ....</p>
+      <br>
+      <br>
+    </div>
+    <div class="footer">
+      <footer>
+        <p class="footer2"><a href="#header" target="_self">Green 4 Earth</a></p>
+      </footer>
+    </div>
   </body>
   <script>
     window.onscroll = function() {myFunction()};
