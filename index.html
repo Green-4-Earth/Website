@@ -12,7 +12,7 @@
     <style>
       body, html{
         margin: 0px;
-        background-color: rgba(255,255,255,1);
+        background-color: rgba(0,0,0,0.1);
       }
       a {
         text-decoration: none;
@@ -80,25 +80,52 @@
         background-repeat: no-repeat;
         background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/09/34/db/d3/parque-ecoalberto.jpg");
       }
+      table, th, td {
+        padding: 10px;
+        color: #004020;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid #004020;
+        width: 50%;
+        height: 50%;
+        box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);
+      }
+      th {
+        background-color: rgba(0,150,0,0.5);
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
       .line-separator {
         height:1px;
         background:#717171;
         border-bottom:1px solid #313030;
       }
       .footer {
-        display: block;
         color: white;
-        padding: 30px;
         margin-top: 40px;
         box-shadow: 100px 100px 100px 100px rgba(0, 255, 0, 0.6);
         background-color:  #008040;
         display: block;
         text-align: left;
+        overflow: auto;
       }
       .footer2 {
-        margin-top: -10px;
+        margin-top: 10px;
         font-size: 20px;
-        margin-left: auto;
+        margin-left: 20px;
+        float: left;
+        text-align: center;
+      }
+      #footimg {
+        border-radius: 0;
+        float:right;
+        border: none;
+        max-width: 100px;
+        max-height: 100px;
+        margin: 10px;
       }
       .content {
         padding: 10px;
@@ -139,13 +166,68 @@
       <div class="line-separator"></div>
       <h3>¿Qué es Ecoalberto?</h3>
       <p>
-        Es un parque de Ecoturismo, en la localidad de Itzlahuaca
+        Es un parque de Ecoturismo, en la localidad de Ixmiquilpan, Hidalgo; <br>
+        ###Tomar NOTAS del parque###
       </p>
+      <div class="line-separator"></div>
+      <p>// Slideshow</p>
       <br>
+      <div class="line-separator"></div>
+      <h3>¿Quiénes integran el equipo?</h3>
+      <br>
+      <div style="overflow-x:auto;">
+        <table>
+          <tr>
+            <th>Nombre</th>
+            <th>Matrícula</th>
+            <th>Ciencia</th>
+          </tr>
+          <tr>
+            <td>Rodrigo Hidalgo</td>
+            <td>A01023805</td>
+            <td>Biología</td>
+          </tr>
+          <tr>
+            <td>Jessica Borovoy</td>
+            <td>A01653530</td>
+            <td>Biología</td>
+          </tr>
+          <tr>
+            <td>Esteban Sapién</td>
+            <td>A01024022</td>
+            <td>Química</td>
+          </tr>
+          <tr>
+            <td>Diana Orozco</td>
+            <td>A01023706</td>
+            <td>Química</td>
+          </tr>
+          <tr>
+            <td>Fernanda de Luna</td>
+            <td>A01023837</td>
+            <td>Física</td>
+          </tr>
+          <tr>
+            <td>Lía Núñez</td>
+            <td>A01023743</td>
+            <td>Informática</td>
+          </tr>
+          <tr>
+            <td>Luis Fernández</td>
+            <td>A01023675</td>
+            <td>Informática</td>
+          </tr>
+        </table>
+      </div>
     </div>
     <div class="footer">
       <footer>
-        <p class="footer2"><a href="#header" target="_self">Green 4 Earth</a></p>
+        <p class="footer2">
+          <a href="#header" target="_self">Green 4 Earth</a><br>
+          Tecnológico de Monterrey Santa Fe<br>
+          Proyecto IB grupo 4<br>
+        </p>
+        <img src="LogoG4.png" alt="Green 4 Earth" id="footimg">
       </footer>
     </div>
   </body>
