@@ -82,9 +82,33 @@
         max-height: 100px;
         margin: 10px;
       }
+      header {
+        width: cover;
+        margin:auto;
+        height: 600;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("EA_Util/InfoHead.JPG");
+      }
+      /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position:static;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.line-separator {
+  height:1px;
+  background:#717171;
+  border-bottom:1px solid #313030;
+}
     </style>
   </head>
   <body>
+    <header id="header">
+    </header>
     <div class="scroll" id="myScroll">
       <ul>
         <li><a href="https://green-4-earth.github.io/Website/index.html" target="_self">Inicio</a></li>
@@ -95,6 +119,16 @@
         <li><a href="https://green-4-earth.github.io/Website/contact.html" target="_self">Contacto</a></li>
       </ul>
     </div>
+    <br>
+    <div class="line-separator"></div>
+    <br>
+    <!-- The video -->
+    <video autoplay unmuted loop id="myVideo">
+      <source src="EA_Util/Green 4 Earth Trailer.mp4" type="video/mp4">
+    </video>
+    <br><br>
+    <div class="line-separator"></div>
+
     <div class="footer">
       <footer>
         <p class="footer2">
@@ -122,5 +156,8 @@
         header.classList.remove("sticky");
       }
     }
+    // Get the video
+var video = document.getElementById("myVideo");
+
   </script>
 </html>
