@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <link href="/normalize.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       body, html{
         margin: 0px;
@@ -246,6 +248,32 @@
         from {opacity: .4}
         to {opacity: 1}
       }
+      @media only screen and (max-device-width: 1366px) {
+          .parallax {
+              background-attachment: scroll;
+          }
+      }
+      .parallax {
+          /* The image used */
+          background-image: url("img_parallax.jpg");
+
+          /* Set a specific height */
+          height: 500px;
+
+          /* Create the parallax scrolling effect */
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      #Git {
+        color: white;
+        text-decoration: none;
+      }
+      #Git:hover {
+        color: white;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -390,7 +418,7 @@
             <a href="#header" target="_self">Green 4 Earth</a><br>
               Tecnológico de Monterrey Santa Fe<br>
               Proyecto IB grupo 4<br>
-              Desarrollado con Github<br>
+              <a href="https://github.com/Green-4-Earth/Website" id="Git" target="_blank">Desarrollado con Github <i class="fa fa-github" style="font-size:24px"></i></a>
           </p>
           <p>
           <q>The science of today is the technology of tomorrow</q>

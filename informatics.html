@@ -3,6 +3,7 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <style>
     body, html {
       margin: 0;
@@ -29,6 +30,13 @@
         padding: 0px 20px 0px 20px;
         text-align: center;
         font-family: 'Cinzel', serif;
+      }
+      h3 {
+        font-size: 40px;
+        margin: 10px;
+        font-family: 'Lobster', cursive;
+        text-align: center;
+        text-shadow: 2px 2px grey;
       }
       .content {
         padding: 10px;
@@ -92,22 +100,50 @@
         background-image: url("EA_Util/InfoHead.JPG");
       }
       /* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-    position:static;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-.line-separator {
-  height:1px;
-  background:#717171;
-  border-bottom:1px solid #313030;
-}
+      #myVideo {
+          position:static;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 100%;
+          max-height: 100%;
+      }
+      .line-separator {
+        height:1px;
+        background:#717171;
+        border-bottom:1px solid #313030;
+      }
+      @media only screen and (max-device-width: 1366px) {
+          .parallax {
+              background-attachment: scroll;
+          }
+      }
+      .parallax {
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      #Btn {
+        width: 200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #Btn:hover {
+        background: #ddd;
+        color: black;
+      }
     </style>
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="parallax">
     </header>
     <div class="scroll" id="myScroll">
       <ul>
@@ -126,9 +162,12 @@
     <video autoplay unmuted loop id="myVideo">
       <source src="EA_Util/Green 4 Earth Trailer.mp4" type="video/mp4">
     </video>
-    <br><br>
+    <div class="content">
+      <button id="Btn" onclick="mute()">Mute</button>
+    </div>
+    <br>
     <div class="line-separator"></div>
-
+    <h3>¿Qué hicimos?</h3>
     <div class="footer">
       <footer>
         <p class="footer2">
@@ -158,6 +197,16 @@
     }
     // Get the video
 var video = document.getElementById("myVideo");
-
+var btn = document.getElementById("Btn");
+function mute () {
+  if (video.muted) {
+    video.muted = false;
+    btn.innerHTML = "Mute";
+  }
+  else {
+    video.muted = true;
+    btn.innerHTML = "Unmute";
+  }
+}
   </script>
 </html>
