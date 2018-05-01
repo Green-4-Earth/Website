@@ -7,6 +7,19 @@
     <style>
     body, html {
       margin: 0;
+      flex: auto;
+      background: linear-gradient(to left, green, yellow);
+    }
+    @media only screen and (max-device-width: 1366px) {
+        .parallax {
+            background-attachment: scroll;
+        }
+    }
+    .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
       a {
         text-decoration: none;
@@ -24,7 +37,7 @@
         padding: 10px;
         background: rgba(0,0,0,0.6);
       }
-      li {
+      ul li {
         font-size: 25px;
         display: inline;
         padding: 0px 20px 0px 20px;
@@ -104,10 +117,79 @@
         background-repeat: no-repeat;
         background-image: url("EA_Util/ChemHead.JPG");
       }
+
+      .content-metodología-experimental {
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: justify;
+        font-size: 20px;
+        flex: auto;
+        margin: 0 50px;
+      }
+      .content-analisis {
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: justify;
+        font-size: 25px;
+        line-height: 1;
+        flex: auto;
+        margin: 0 50px;
+      }
+
+      .row {
+          margin: 8px ;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          width: 100%;
+      }
+
+      /* Add padding BETWEEN each column (if you want) */
+      .row,
+      .row > .column {
+          padding: 11px;
+      }
+
+      /* Create four equal columns that floats next to each other */
+      .column {
+          float: left;
+          width: 23%;
+      }
+
+      /* Clear floats after rows */
+      .row:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+
+      /* Content */
+      .content {
+          background-color: rgba(0,0,0,0.5);
+          padding: 10px;
+          color: white;
+          max-height: 275px;
+          height: 100%;
+      }
+
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 900px) {
+          .column {
+              width: 50%;
+          }
+      }
+
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+          .column {
+              width: 100%;
+          }
+      }
+
     </style>
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="parallax">
     </header>
     <div class="scroll" id="myScroll">
       <ul>
@@ -122,16 +204,111 @@
 
     <h3>Metodología Experimental</h3>
     <div class="content-metodología-experimental">
+      <ol type="I">
+        <li><strong>Recolección del pH y conductividad</strong>
+          <ol>
+            <li>Recolectar tres muestras de 10 gramos de tierra a un nivel de 0 a 20 cm.</li>
+            <li>Colocar cada muestra en diferentes vasos de precipitados de plástico de 100mL.</li>
+            <li>Agregar 50 mL de agua destilada a cada vaso de precipitado de plástico de 100 mL.</li>
+            <li>Agitar las muestras con el agitador de vidrio y dejar reposar por 20 minutos. </li>
+            <li>Tomar el pH de las disoluciones con el pH-metro. Mantener bombilla del pH-metro en las disoluciones por 30 segundos y anotar pH. Asegurar que la bombilla no entre en contacto con el fondo del recipiente. Limpia la bombilla con electrodos del ph-metro con agua destilada en piseta después de cada medición. Y secar con papel.</li>
+            <li>Posteriormente en las mismas muestras colocas las dos partes de los electrodos del voltímetro y anota la corriente eléctrica de la disolución del suelo en la tierra. Limpia los electrodos del voltímetro cada vez que se realice el cálculo.</li>
+            <li>Repetir el proceso en los otros tres cuadrantes.</li>
+          </ol>
+        </li>
+        <br>
+        <li><strong>Titulación ácido base para determinar bicarbonato de calcio</strong>
+          <ol>
+            <li>Pesar 56.7 gramos de tierra de cada muestra.</li>
+            <li>Colocar un papel filtro sobre un embudo y colocar la tierra.</li>
+            <li>Colocar 50 mL de agua aproximadamente y dejar que se filtre.</li>
+            <li>Filtrar hasta que el agua salga transparente.</li>
+            <li>Colocar el agua en un vaso de precipitados de 150 mL</li>
+            <li>Colocar 1.1mL de ácido clorhídrico 18M en el vaso de precipitados con el agua filtrada.</li>
+            <li>Preparar una disolución de hidróxido de sodio (NaOH) 1M</li>
+            <li>Colocar el vaso de precipitados sobre una parrilla, y coloca un agitador magnético. Luego agrega 3 gotas de fenolftaleína a la muestra.</li>
+            <li>Colocar la disolución de 1M NaOH en una bureta de 25mL.</li>
+            <li>Comienza la titulación, dejando caer gota por gota del NaOH 1M de la bureta sobre el vaso de precipitados de 150mL con el HCl y el agua filtrada.</li>
+            <li>Cerrar la bureta cuando haya un cambio de color del transparente al rosa.</li>
+            <li>Medir la cantidad de NaOH 1M utilizada en la titulación.</li>
+            <li>Repetir el proceso con las otras dos muestras.</li>
+          </ol>
+        </li>
+      </ol>
     </div>
     <br>
     <div class="line-separator"></div>
     <h3>Datos</h3>
     <div class="content-datos">
+
+      <div class="row">
+        <div class="column">
+          <div class="content">
+            <img src="EA_Util/c1.png" alt="Gráfica de Macronutrientes" style="width:100%">
+            <h4>Macronutrientes</h4>
+            <p>Moles de bicarbonato de calcio CO<sub>3</sub> en la tierra de los cuadrantes.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="EA_Util/c2.png" alt="Gráfica de Electrones" style="width:100%">
+            <h4>Electrones</h4>
+            <p>Conductividad en los cuadrantes.<br>(3 pruebas)</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="EA_Util/c3.png" alt="Gráfica de Acidez" style="width:100%">
+            <h4>Acidez</h4>
+            <p>pH en los cuadrantes.<br>(3 pruebas)</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="EA_Util/c4.png" alt="Filtración" style="width:100%; height:55%">
+            <h4>Filtración de tierra</h4>
+            <p>Filtración de tierra para su titulación experimental.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="EA_Util/c5.png" alt="Muestras de tierra" style="width:100%; height:60%;">
+            <h4>Muestras de tierra</h4>
+            <p>Recolección de muestras de tierra de cada cuadrante analizado.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="EA_Util/c6.JPG" alt="Proceso experimental" style="width:100%">
+            <h4>Proceso experimental</h4>
+            <p>Recolección de muestras y obtención de datos mediante el proceso experimental.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video width="270" height="160" align="top" autoplay muted loop>
+              <source src="EA_Util/c7.mp4" type="video/mp4">
+            </video>
+            <h4>Ambiente</h4>
+            <p>El entorno dentro de EcoAlberto donde se hiceron las colectas de datos experimentales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     </div>
     <br>
     <div class="line-separator"></div>
     <h3>Análisis</h3>
     <div class="content-analisis">
+      <p>A partir de la obtención de resultados, se puede determinar que existe la presencia de algunos factores químicos en el suelo que influyen en el crecimiento de las cactáceas.</p>
+      <p>Lo primero a analizar fue el pH de la tierra. El cuadrante 1 tiene un pH alcalino mientras que los cuadrantes 2 y 3 son ligeramente ácidos (aunque muy cercanos a un pH neutro). Esto indica varias cosas: una de las posibles causas es que el cuadrante 1 no tiene buena filtración en la tierra además de que durante la recolección, fue complicado recolectar tierra debido a la rigidez de la montaña que se presenta por su estructura rocosa. Lo anteriormente mencionado hace más complicado que se filtre el agua de esta manera. Mientras tanto, en los cuadrantes 2 y 3, se pudo recolectar la tierra de manera mucho más sencilla. Lo que puede indicar que hay un buen flujo de agua por las raíces.</p>
+      <p>Otra posible causa por la que los cuadrantes 2 y 3 pueden haber sido ácidos, es por que el dióxido de carbono acidifica el agua y la tierra. Es por eso que si hay una gran concentración de CO2 en la atmósfera, la lluvia se vuelve ácida.</p>
+      <p>Finalmente hay una tercera causa por la cual los cuadrantes pueden tener un pH ácido. Esto se puede deber a que las plantas reciben nutrientes en forma de iones. Normalmente absorben más cationes que aniones. Pero las cactáceas deben mantener la carga neutral en las raíces, es por eso que pueden liberar H+, para poder mantener la carga neutra.</p>
+      <p>Los resultados en todas las muestras de pH en cada cuadrante son muy repetitivos, por lo que se le puede confiar a la falibilidad de los datos obtenidos en términos de precisión.</p>
+      <p>Lo segundo a analizar será la conductividad en las diferentes muestras. De acuerdo al departamento de agricultura de los Estados Unidos, mientras incrementa la conductividad, la presencia de microorganismos disminuye, lo cual dificulta algunos procesos que debe llevar a cabo la cactácea. Tal como la respiración, la descomposición de residuos, la nitrificación y la desnitrificación. La conductividad en el cuadrante 1 y 2 son similares las unas a las otras, mientras que en el tercer cuadrante, se puede apreciar una pequeña disminución de la conductividad en la tierra. En términos relativos la diferencia entre la corriente eléctrica de las diferentes muestras es muy baja. Ya que lo estamos midiendo en miliVolts. Por lo tanto, esto no nos va a poder ayudar a determinar si la conductividad fue factor en el crecimiento de las cactáceas en los cuadrantes.</p>
+      <p>Durante los datos la conductividad iba variando, así que se tomó en un momento donde estuviera estable. Además como la conductividad es muy baja y el multímetro tiene una incertidumbre muy baja: la conductividad eléctrica iba variando.</p>
+      <p>Finalmente se determinó la concentración del bicarbonato de calcio en la tierra a través del método de titulación. El rango varió desde 0.30% hasta 0.519%. El calcio es relevante en la tierra, ya que es el segundo macronutriente más importantes para el crecimiento de las plantas. En nuestro análisis determinamos con un pequeño rango de error, las concentraciones del bicarbonato de calcio en las muestras. De igual manera en los tres cuadrantes se presentaron resultados muy precisos. En los tres cuadrantes existe una cantidad similar de bicarbonato de calcio. </p>
     </div>
     <br>
 
