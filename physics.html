@@ -1,5 +1,6 @@
 <html>
   <head>
+    <title>Física</title>
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
@@ -7,6 +8,18 @@
     <style>
     body, html {
       margin: 0;
+      background: linear-gradient(to top right, yellow, green);
+    }
+    @media only screen and (max-device-width: 1366px) {
+        .parallax {
+            background-attachment: scroll;
+        }
+    }
+    .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
       a {
         text-decoration: none;
@@ -24,7 +37,7 @@
         padding: 10px;
         background: rgba(0,0,0,0.6);
       }
-      li {
+      ul li {
         font-size: 25px;
         display: inline;
         padding: 0px 20px 0px 20px;
@@ -104,10 +117,89 @@
         background-repeat: no-repeat;
         background-image: url("EA_Util/FisicHead.JPG");
       }
+      .content-investigacion{
+        margin-top: -40px;
+        text-align: justify;
+        font-size: 25px;
+        color: white;
+        padding: 40px;
+        text-shadow: 2px 2px black;
+      }
+      .content-metodología-experimental {
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: justify;
+        font-size: 20px;
+        flex: auto;
+        margin: 0 50px;
+      }
+      li:nth-child(even) {
+        color: blue;
+      }
+      .content-analisis {
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: justify;
+        font-size: 25px;
+        line-height: 1;
+        flex: auto;
+        margin: 0 50px;
+      }
+
+      .row {
+          margin: 8px ;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          width: 100%;
+      }
+
+      /* Add padding BETWEEN each column (if you want) */
+      .row,
+      .row > .column {
+          padding: 11px;
+      }
+
+      /* Create four equal columns that floats next to each other */
+      .column {
+          float: left;
+          width: 23%;
+      }
+
+      /* Clear floats after rows */
+      .row:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+
+      /* Content */
+      .content {
+          background-color: rgba(0,0,0,0.5);
+          padding: 10px;
+          color: white;
+          max-height: 350px;
+          height: 100%;
+      }
+
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 900px) {
+          .column {
+              width: 50%;
+          }
+      }
+
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+          .column {
+              width: 100%;
+          }
+      }
+
     </style>
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="parallax">
     </header>
     <div class="scroll" id="myScroll">
       <ul>
@@ -119,19 +211,82 @@
         <li><a href="https://green-4-earth.github.io/Website/contact.html" target="_self">Contacto</a></li>
       </ul>
     </div>
-
+    <h3>Investigación</h3>
+    <div class="content-investigacion">
+      <p>La investigación por parte de física se basó en tener un conocimiento previo del tema que se estaba tratando. En este caso la densidad y todos los temas relacionados a ella. La densidad es una característica física de cualquier cuerpo. Muestra la relación entre la masa y el volumen de un objeto, pero en el caso de este experimento se hablaba de la densidad aparente. La cual es el volumen seco de la tierra por unidad de volumen en ella. Esta considera ambos, el espacio sólido y el vacío en la masa. Mientras que la densidad de partículas solo se enfoca en volumen sólido. Este tipo de densidad es vital para determinar la porosidad en la tierra. </p>
+      <p>En cuanto a la porosidad en la tierra, esta se refiere al vacío en el volumen de la tierra que puede estar ocupado por aire o agua. Se relaciona inversamente a la densidad aparente. La porosidad se calcula dividiendo la densidad aparente entre la densidad de partículas y se multiplica por cien. Esto da como resultado el porcentaje de espacio sólido. Luego al 100%, que es el total, se le resta el porcentaje de espacio sólido, y así se obtiene el porcentaje de espacio poroso.</p>
+      <p>La tierra suelta y porosa tiene menor densidad aparente que la tierra apretada. La porosidad depende del tamaño de las partículas y de la agregación. Por ende un mayor número de partículas pequeñas en un espacio de suela tendrá una porosidad mayor, por ejemplo:  es más porosa la arcilla que la arena.  Cuando es el mismo volumen de partículas pero el número de partículas es menor, igual será menos porosa. Sin embargo, mediante la porosidad no se puede determinar el tamaño de las partículas.</p>
+      <p>La compresión y la agregación hacen disminuir los espacios porosos mientras que la densidad aparente va a aumentar.</p>
+      <p>Es muy importante considerar el espacio de los poros, pues gracias a esta característica se controla el almacenamiento del aire y agua. Los poros vienen en todos los tamaños, por ejemplo, la arena tendrá poros más grandes que la arcilla. No obstante, la tierra tiene una combinación equitativa de ambos tamaños. Los poros grandes se conocen como macroporos y los chicos como microporos.</p>
+      <p>Los macroporos permiten una mejor oxigenación para el suelo, la cual es necesaria para que exista un intercambio de oxígeno en las plantas. Se dice que en una tierra fértil el 10% de los poros son grandes y contiene un gran espacio para la aireación.</p>
+    </div>
+    <div class="line-separator"></div>
     <h3>Metodología Experimental</h3>
     <div class="content-metodología-experimental">
+      <ol>
+        <li>Utilizar el procedimiento de lanzar pelota para marcar cuadrantes.</li>
+        <li>Dentro de dicho cuadrante, usando la pala, aplanar la tierra.</li>
+        <li>Después introducir el bote de metal dentro de la tierra. No presionar demasiado para no compactarla.</li>
+        <li>Remover el exceso de tierra fuera del bote.</li>
+        <li>Colocar la tierra en una bolsa de plástico y marcar lugar y hora a la que fue tomada.</li>
+        <li>Calcular el volumen de la tierra (midiendo la altura y diámetro del bote).</li>
+        <li>Luego calcular el volumen de la tierra seca.</li>
+        <li>Para ello, primero pesar la tierra (W1).</li>
+        <li>Después meter la tierra en el horno por 10 minutos.</li>
+        <li>Una vez seca la tierra, volverla a pesar (W2) y calcular el peso final (W2 - W1).</li>
+        <li>Y por último tomar la densidad total. (densidad tierra seca / densidad tierra).</li>
+      </ol>
     </div>
     <br>
     <div class="line-separator"></div>
     <h3>Datos</h3>
     <div class="content-datos">
+
+      <div class="row">
+        <div class="column">
+          <div class="content">
+            <img src="EA_Util/f1.png" alt="Diagrama experimental" style="width:100%">
+            <h4>Diagrama de vaso</h4>
+            <p>Se muestran el diagrama del proceso experimental empleando un vaso.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="EA_Util/f2.png" alt="Lista de densidades" style="width:100%">
+            <h4>Densidad</h4>
+            <p>Se muestra los cálculos y fórmulas empleados para encontrar la densidad de los tres cuadrantes.</p>
+          </div>
+        </div>
+        <!--<div class="column">
+          <div class="content">
+            <img src="EA_Util/e02.JPG" alt="Cylindropuntia imbricata" style="width:100%">
+            <h4>Cylindropuntia imbricata</h4>
+            <p>Cuadrante 1 / Cuadrante 2 / Cuadrante 3</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="EA_Util/e03.JPG" alt="Mammillaria magnimamma" style="width:100%">
+            <h4>Mammillaria magnimamma</h4>
+            <p>Cuadrante 1 / Cuadrante 2</p>
+          </div>
+        </div>
+      </div>
+      -->
+
+    </div>
     </div>
     <br>
     <div class="line-separator"></div>
     <h3>Análisis</h3>
     <div class="content-analisis">
+      <p>Durante el proyecto se mostraron varias dificultades. Primero en la toma de muestras fue complicado recolectar estas, pues la zona que se analizó era una montaña y por ende estaba llena de rocas que dificultaban el proceso. Por otra parte, al momento de tratar de tomar las muestras tal como lo decía la metodología: solo introduciendo el contenedor sin deshacer la tierra, esto resultó bastante laborioso, ya que la tierra se encontraba muy compacta y seca. Entonces el contenedor no podía ser introducido como se esperaba. Por ende, se necesitó una pala para separar un gran pedazo de tierra de alrededor y así poderla guardar el contenedor sin que esta haya sido destruida.</p>
+      <p>Después, durante la parte de la experimentación, se debe de tomar en cuenta el posible margen de error del peso de la tierra, la cual pudo haber variado del momento en el que se tomó la muestra al momento en que se pesó.</p>
+      <p>En el cuadrante 1, en el cual se encontraban 4 cactáceas, la densidad de la tierra fue de 0.586 gr/cm3. Este fue el cuadrante promedio, pues la cantidad de cactáceas está a la mitad de los otros dos cuadrantes, al igual que el resultado de la densidad.</p>
+      <p>Siendo el cuadrante 2 el que más cactáceas tenía, seis en total, también fue el que tenía una densidad del suelo menor. El segundo cuadrante tuvo una densidad de 0.452 gr/cm3.Pues un índice de densidad alto es un indicador de que hay baja porosidad en la tierra y que esta es más compacta. Si esto sucede, existe una restricción para el crecimiento de las raíces de las plantas, pues hay poco espacio para el movimiento, para la oxigenación y para el agua.</p>
+      <p>El tercer cuadrante, con solo dos cactáceas tuvo una densidad de 0.616 gr/cm3que fue el valor más alto que se obtuvo. La escasez de plantas en esta zona sucede por la tierra compacta, pues en esta las raíces no son tan profundas y las plantas suelen no desarrollarse por completo. Cuando esto pasa, también se reduce una cubierta que crean las plantas, la cual funciona para proteger a la tierra de la erosión. También la tierra compacta no permite la entrada de agua fácilmente, entonces cuando llueve, el agua solo corre y  la superficie de la tierra se desgasta y se erosiona. En climas áridos, la tierra compacta no afecta tanto como en climas húmedos. Pues en áreas húmedas, las plantas necesitan más agua y espacio para el crecimiento de las raíces.</p>
+      <p>Se debe de considerar que la densidad del suelo no solo se ve afectado por la compactación o por los flujos del agua, sino también por factores internos como la composición mineral y la textura. Es por esto que existe un margen de error para las pruebas, pues aunque se hayan tomado muestras con la menor cantidad de piedras posibles, toda la tierra estaba llena de pequeños fragmentos de materiales sólidos.</p>
+      <p>Se puede decir que la densidad aumenta con la profundidad del suelo, ya que las capas superficiales de la tierra tienen materia orgánica, partículas sólidas y raíces de plantas en comparación con el fondo de la tierra, que tiene menos espacio poroso.</p>
     </div>
     <br>
 
